@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import currentSlide from '../img/chiweb_logo_default.svg'
+import currentSlide from '../img/wcc-laser-text.svg'
+import logo from '../img/primeLogo.svg';
 
 export default class JumboSlides extends Component {
 
@@ -19,7 +20,7 @@ export default class JumboSlides extends Component {
         return (
             <div className = 'JumboSlides'>
                 <div className = 'slide-show'>
-
+                    <img src={logo} alt="" />
                 </div>
             </div>
         )

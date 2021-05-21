@@ -1,0 +1,53 @@
+// COMPONENT #4 - <Contact/>
+#Contact{
+        
+    .contact-card{
+        .flex(row);
+        justify-content: space-between;
+        .business-info{
+            width: 45%;
+            address{
+                margin: 5% 0;
+                margin-bottom: 10%;
+            }
+            p{
+                width: 100%;
+                text-align: center;
+                font-size: 1.6rem;
+                margin: 5% 0;
+            }
+            img{
+                display: block;
+                margin: 0 auto;
+                max-width: 90%
+            }
+        }
+        .form{
+            .flex(column);
+            width: 45%;
+            label{
+                margin: 2% 0;
+            }
+            textarea{
+                height: 190px;
+            }
+
+            button{
+                width: 30%;
+                margin: 0 auto;
+                margin-top: 5%;
+            }
+
+        }
+        //TABLET
+        @media @tablet {
+            .flex(column-reverse);
+            .business-info{
+                width: 100%;
+            }
+            .form{
+                width: 100%;
+            }
+        }
+    }// end of contact card
+}

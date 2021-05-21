@@ -1,3 +1,4 @@
+@import '../css/fonts.css';
 .Header {
   background-color: black;
 }
@@ -6,37 +7,119 @@
 }
 .Header .JumboSlides .slide-show {
   width: 100%;
-  height: 300px;
-  background-color: lightgray;
+  height: 250px;
 }
 .Header .Navigation {
+  height: 250px;
   padding: 1% 2%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 .Header .Navigation .img {
-  width: 20%;
+  margin: 0 auto;
+  width: 350px;
 }
 .Header .Navigation .img img {
   width: 100%;
+  min-width: 350px;
 }
-nav {
+.Header .Navigation nav {
   margin: 0 auto;
-  margin-top: 4%;
+  height: 120px;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
-  width: 50%;
+  width: 100%;
 }
-nav .nav-link {
-  font-family: 'Pirata One', cursive;
+.Header .Navigation nav .nav-link {
+  line-height: 100px;
   color: white;
   text-decoration: none;
   font-size: 1.9rem;
 }
+#Services .menu {
+  display: flex;
+  flex-direction: column;
+}
+#Services .menu h4 {
+  font-size: 1.7rem;
+  font-family: 'Mandalore 3D';
+  letter-spacing: 2px;
+}
+#Services .menu p {
+  font-size: 1.5rem;
+}
+#Contact .contact-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#Contact .contact-card .business-info {
+  width: 45%;
+}
+#Contact .contact-card .business-info address {
+  margin: 5% 0;
+  margin-bottom: 10%;
+}
+#Contact .contact-card .business-info p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 5% 0;
+}
+#Contact .contact-card .business-info img {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+}
+#Contact .contact-card .form {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+#Contact .contact-card .form label {
+  margin: 2% 0;
+}
+#Contact .contact-card .form textarea {
+  height: 190px;
+}
+#Contact .contact-card .form button {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+@media (max-width: 1000px) {
+  #Contact .contact-card {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #Contact .contact-card .business-info {
+    width: 100%;
+  }
+  #Contact .contact-card .form {
+    width: 100%;
+  }
+}
+.middleWithMarg {
+  margin: 0 auto;
+}
+.JumboSlides {
+  margin: 0;
+  padding: 1%;
+}
+.JumboSlides .slide-show {
+  width: 100%;
+}
+.JumboSlides .slide-show img {
+  width: 600px;
+}
 * {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Mandalore Condensed';
 }
 .App {
-  width: 90%;
+  overflow: hidden;
+  background-color: #ffffff;
+  max-width: 1200px;
   margin: 0 auto;
 }

@@ -1,14 +1,25 @@
 //less file imports
-@import './Header.less';
+@import 'Header';
+@import 'Services';
+@import 'Contact';
+@import 'mixins';
+@import 'JumboSlides';
 
+
+//fonts
+@import '../css/fonts.css';
 
 //Global Styles
 
 *{
-    font-family: 'Roboto Mono', monospace;
+    .MandaloreCondensed();
 }
 
+
 .App{
-    width: 90%;
-    margin: 0 auto;
+    overflow: hidden;
+    .bg(@color4);
+    .max-w(1200px);
+    .middleWithMarg();
+
 }
