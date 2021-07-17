@@ -123,3 +123,11 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+.UnderMaint img {
+  width: 80%;
+}
+.UnderMaint h4 {
+  font-size: 1rem;
+  color: black;
+  font-family: 'Inconsolatazi';
+}
