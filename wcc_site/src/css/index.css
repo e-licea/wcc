@@ -101,6 +101,21 @@
     width: 100%;
   }
 }
+.IBM {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+.Inconsolatazi {
+  font-family: 'Inconsolatazi';
+}
+.Mandalore {
+  font-family: 'Mandalore';
+}
+.MandaloreCondensed {
+  font-family: 'Mandalore Condensed';
+}
+.Mandalore3D {
+  font-family: 'Mandalore 3D';
+}
 .middleWithMarg {
   margin: 0 auto;
 }
@@ -114,8 +129,29 @@
 .JumboSlides .slide-show img {
   width: 600px;
 }
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexsansarabic/v1/Qw3NZRtWPQCuHme67tEYUIx3Kh0PHR9N6YOW_tCT.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexsansarabic/v1/Qw3CZRtWPQCuHme67tEYUIx3Kh0PHR9N6bs6.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexsansarabic/v1/Qw3NZRtWPQCuHme67tEYUIx3Kh0PHR9N6YPO_9CT.ttf) format('truetype');
+}
 * {
-  font-family: 'Mandalore Condensed';
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 .App {
   overflow: hidden;

@@ -6,15 +6,20 @@ import Header from './Components/Header'
 import Render from './Components/Render';
 import UnderMaint from './Components/UnderMaint';
 
+//Imported CSS
+import 'animate.css';
+
 function App() {
   return (
     <div className="App">
-     {/* <BrowserRouter>
+     {/* 
+      <UnderMaint/>
+      */}
+      <BrowserRouter>
         <Header/>
         <Render/>
       </BrowserRouter>
-      */}
-      <UnderMaint/>
+      
       </div>
   );
 }

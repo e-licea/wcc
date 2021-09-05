@@ -1,5 +1,9 @@
 import React from 'react'
 
+//Imports
+import ScrollAnimation from 'react-animate-on-scroll'
+
+
 export default function Services() {
     return (
         <div id = 'Services'>
@@ -15,7 +19,9 @@ export default function Services() {
 
                 <h4>Classic Style Website</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste blanditiis quae quas accusamus quisquam delectus, quaerat explicabo maiores beatae consectetur minima adipisci architecto alias exercitationem vel inventore sequi et rerum.</p>
-
+                <ScrollAnimation duration = '2' animateIn = 'fadeIn'>
+                    Some Text
+                </ScrollAnimation>
             </section>
         </div>
     )
