@@ -38,17 +38,82 @@
   text-decoration: none;
   font-size: 1.9rem;
 }
-#Services .menu {
+#MainNavigator {
+  grid-area: 1 / 2 / 3 / 3;
+}
+#MainNavigator #social-media {
+  height: 5%;
+  width: 100%;
+  background-color: black;
+}
+#MainNavigator #social-media a img {
+  display: inline;
+  width: 25px;
+  height: 25px;
+  margin: 3px;
+}
+#MainNavigator #navigation-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(3, 33.3333%);
+  padding: 0;
+  height: 95%;
+  width: 100%;
+  padding-bottom: 0;
+  margin: 0;
+  list-style: none;
+}
+#MainNavigator #navigation-links-grid li {
+  position: relative;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: center;
+  background-color: black;
+  margin: 0 auto;
+  z-index: 9;
 }
-#Services .menu h4 {
-  font-size: 1.7rem;
-  font-family: 'Mandalore 3D';
-  letter-spacing: 2px;
+#MainNavigator #navigation-links-grid li img {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  filter: grayscale();
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: transform 0.3s;
+  /* Animation */
 }
-#Services .menu p {
-  font-size: 1.5rem;
+#MainNavigator #navigation-links-grid li img:hover {
+  transform: scale(1.2);
+}
+#MainNavigator #navigation-links-grid li a {
+  display: table;
+  z-index: 1;
+  font-size: 1.6rem;
+  text-decoration: none;
+  filter: none;
+  font-family: 'Sheeping Cats';
+  height: max-content;
+  color: var(--white-text) !important;
+}
+#MainNavigator #navigation-links-grid li a:hover {
+  text-decoration: underline var(--white-text) 1px;
+}
+#navigation-links-grid li:nth-child(1):hover {
+  background-color: #92000c !important;
+}
+#navigation-links-grid li:nth-child(2):hover:hover {
+  background-color: #003892 !important;
+}
+#navigation-links-grid li:nth-child(3):hover {
+  background-color: #92000c !important;
+}
+#navigation-links-grid li:nth-child(4):hover {
+  background-color: #003892 !important;
 }
 #Contact .contact-card {
   display: flex;
@@ -101,23 +166,110 @@
     width: 100%;
   }
 }
+.SheepingCats {
+  font-family: 'Sheeping Cats';
+}
 .IBM {
   font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
-.Inconsolatazi {
-  font-family: 'Inconsolatazi';
+.icon {
+  display: inline;
+  width: 25px;
+  height: 25px;
+  margin: 3px;
 }
-.Mandalore {
-  font-family: 'Mandalore';
-}
-.MandaloreCondensed {
-  font-family: 'Mandalore Condensed';
-}
-.Mandalore3D {
-  font-family: 'Mandalore 3D';
+.stamp {
+  width: 110px;
+  height: 110px;
 }
 .middleWithMarg {
   margin: 0 auto;
+}
+.shadow {
+  box-shadow: 8px 8px 20px -6px black;
+}
+.shadow-bottom {
+  box-shadow: 0 8px 6px -6px black;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeOut {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fadeOut {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
 }
 .JumboSlides {
   margin: 0;
@@ -128,6 +280,260 @@
 }
 .JumboSlides .slide-show img {
   width: 600px;
+}
+#Home {
+  display: block;
+  width: auto;
+}
+#Home .homeIntro {
+  width: 100%;
+  min-height: 500px;
+  max-height: 800px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%);
+}
+#Home .homeIntro #IntroLogo {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 5% 2%;
+  min-height: 400px;
+}
+#Home .homeIntro #IntroLogo:hover {
+  background-color: #070606;
+}
+#Home .homeIntro #IntroLogo img {
+  width: 60%;
+  margin: 0 auto;
+}
+#Home .homeIntro #IntroLogo p {
+  color: #ffffff;
+  height: 20px;
+  font-size: 1.2rem;
+}
+#Home .homeIntro #SlideShow {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.react-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.react-switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  background: grey;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+.react-switch-label::after {
+  background-color: red;
+}
+.react-switch-label .react-switch-button {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  transition: 0.2s;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+.react-switch-label:active .react-switch-button {
+  width: 4S0px;
+}
+.theme-dark {
+  --white-text: #ffffff;
+  --dark-text: #ffffff;
+  --light-text: #81ff87;
+  --secondary-text: #ffffff;
+  --dark-background: #191d1f;
+  --light-background: #586F7C;
+  --accent: #B8DBD9;
+  --button-border: #B8DBD9;
+}
+.theme-light {
+  --white-text: #ffffff;
+  --dark-text: #000000;
+  --light-text: #5E4B56;
+  --secondary-text: #000000;
+  --dark-background: #ffffff;
+  --light-background: #EDDCD2;
+  --accent: #DBE7E4;
+  --button-border: #5E4B56;
+}
+:root {
+  /** sunny side **/
+  --blue-background: #c2e9f6;
+  --blue-border: #72cce3;
+  --blue-color: #96dcee;
+  --yellow-background: #fffaa8;
+  --yellow-border: #f5eb71;
+  /** dark side **/
+  --indigo-background: #808fc7;
+  --indigo-border: #5d6baa;
+  --indigo-color: #6b7abb;
+  --gray-border: #e8e8ea;
+  --gray-dots: #e8e8ea;
+}
+@keyframes reverse {
+  0% {
+    left: 47px;
+    width: 40px;
+  }
+  60% {
+    left: 3px;
+    width: 80px;
+  }
+  100% {
+    left: 3px;
+  }
+}
+@keyframes switch {
+  0% {
+    left: 3px;
+  }
+  60% {
+    left: 3px;
+    width: 80px;
+  }
+  100% {
+    left: 40px;
+  }
+}
+.toggle--checkbox {
+  display: none;
+}
+.container--toggle {
+  max-width: 200px;
+  float: right;
+  display: grid;
+  place-items: center;
+  min-height: 60px;
+  position: relative;
+  grid-area: toggle;
+  margin: 18px;
+}
+/* background */
+.toggle--label {
+  width: 70px;
+  height: 34px;
+  overflow: hidden;
+  background: var(--indigo-color);
+  border-radius: 100px;
+  display: flex;
+  position: relative;
+  transition: all 350ms ease-in;
+}
+.toggle--checkbox:checked + .toggle--label {
+  background: var(--blue-color);
+  border-color: var(--blue-border);
+}
+/* sun and moon */
+.toggle--checkbox:checked + .toggle--label:before {
+  animation-name: reverse;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  transition: all 360ms ease-in;
+  background: var(--yellow-background);
+  border-color: var(--yellow-border);
+}
+.toggle--label:before {
+  animation-name: switch;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  content: '';
+  width: 25px;
+  height: 25px;
+  border: 3px solid var(--gray-border);
+  top: 1px;
+  position: absolute;
+  border-radius: 40px;
+  background: white;
+}
+/* moon dimples */
+.toggle--label:after {
+  transition-delay: 0ms;
+  transition: all 250ms ease-in;
+  position: absolute;
+  content: '';
+  box-shadow: var(--gray-dots) -14px 0 0 1px, var(--gray-dots) -22px 12px 0 -1px;
+  left: 80px;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: transparent;
+  border-radius: 50%;
+  opacity: 1;
+}
+.toggle--checkbox:checked + .toggle--label:after {
+  transition-delay: 50ms;
+  opacity: 0;
+}
+/* clouds */
+.toggle--checkbox:checked + .toggle--label .toggle--label-background {
+  width: 5px;
+  left: 65px;
+  top: 22px;
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
+  top: -4px;
+  left: 0px;
+  width: 20px;
+  height: 5px;
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
+  top: 3px;
+  width: 20px;
+  height: 5px;
+  left: 10px;
+}
+/* stars */
+.toggle--label-background {
+  border-radius: 5px;
+  position: relative;
+  background: white;
+  left: 32px;
+  width: 4px;
+  transition: all 150ms ease-in;
+  top: 12px;
+  height: 4px;
+}
+.toggle--label-background:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: -15px;
+  border-radius: 5px;
+  background: white;
+  left: -20px;
+  transition: all 150ms ease-in;
+}
+.toggle--label-background:after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  left: -20px;
+  top: 10px;
+  border-radius: 5px;
+  background: white;
+  transition: all 150ms ease-in;
 }
 @font-face {
   font-family: 'IBM Plex Sans Arabic';
@@ -150,12 +556,73 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/ibmplexsansarabic/v1/Qw3NZRtWPQCuHme67tEYUIx3Kh0PHR9N6YPO_9CT.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v10/KFOhCneDtsqEr0keqCMhbCc_CsE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v10/KFOjCneDtsqEr0keqCMhbBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v10/KFO-CneDtsqEr0keqCMhbC-BL-Hy.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCp6KVjbNBYlgoKejZftWyI.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCu6KVjbNBYlgoKeg7z.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoC1CzTtw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgo6eA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCjC3Ttw.ttf) format('truetype');
+}
 * {
-  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--light-text);
+}
+html,
+#root,
+.App {
+  background-color: var(--dark-background);
 }
 .App {
   overflow: hidden;
-  background-color: #ffffff;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -165,5 +632,4 @@
 .UnderMaint h4 {
   font-size: 1rem;
   color: black;
-  font-family: 'Inconsolatazi';
 }

@@ -1,0 +1,40 @@
+#Home{
+    display: block;
+    .w(auto);
+    .homeIntro{
+        .w(100%);
+        .min-h(500px);
+        .max-h(800px);
+        .grid(
+            //columns
+            repeat(2, 50%),
+            //rows
+            repeat(2, 50%) 
+        );
+
+        #IntroLogo{
+            .bg(@color3);
+            .flex(column);
+            align-items: center;
+            .gridArea( 1 / 1 / 2 / 2);
+            .p(5% 2%);
+            .min-h(400px);
+            &:hover{
+                .bg(#070606);
+            }
+            img{
+                .w(60%);
+                .middleWithMarg();
+            }
+            p{
+                .c(@color4);
+                .h(20px);
+                .f-size(1.2rem);
+            }
+        }
+        #SlideShow{
+            .gridArea( 2 / 1 / 3 / 2;);
+        }
+    }
+
+}

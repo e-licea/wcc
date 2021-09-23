@@ -1,9 +1,9 @@
 //colors
 @color0: #fb3737;
-@color1: #283253;
+@color1: #213476;
 @color3: #000000;
 @color4: #ffffff;
-@color5: #3b3b3b;
+@color5: #666666;
 
 //background-color
 .bg(@c){
@@ -15,6 +15,30 @@
     color: @c;
 }
 
+//display
+.invisible(){
+    display: none;
+}
+
+.visible(){
+    display: block;
+}
+
+//grid
+.grid(@rows, @columns){
+    display: grid;
+    grid-template-columns: @columns;
+    grid-template-rows: @rows;
+}
+
+.grid-gap(@r, @c){
+    grid-row-gap: @r;
+    grid-column-gap: @c;
+}
+
+.gridArea(@gridArea){
+    grid-area: @gridArea;
+}
 
 //media queries
 @mobile: ~"(max-width: 600px)";
@@ -45,29 +69,33 @@
     font-size: @size;
 }
 
+.SheepingCats{
+    font-family: 'Sheeping Cats';
+}
+.UbuntuMono(){
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.UbuntuSerif(){
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .IBM{
     font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
-.Inconsolatazi{
-    font-family: 'Inconsolatazi';
+//Icons
+.icon{
+    display: inline;
+    .w(25px);
+    .h(25px);
+    .m(3px);
 }
 
-.Mandalore{
-    font-family: 'Mandalore';
+.stamp{
+    .w(110px);
+    .h(110px);
 }
-
-.MandaloreCondensed{
-    font-family: 'Mandalore Condensed';
-}
-
-
-.Mandalore3D{
-    font-family: 'Mandalore 3D';
-}
-
-
-
 
 //flex
 .flex(@flow){
@@ -89,6 +117,24 @@
 }
 
 //border
+.b(@b){
+    border: @b;
+}
+.b-bottom(@config){
+    border-bottom: @config;
+}
+.b-right(@config){
+    border-right: @config;
+}
+.b-left(@config){
+    border-left: @config;
+}
+.b-top(@config){
+    border-top: @config;
+}
+.b-r(@size){
+    border-radius: @size;
+}
 .b(@style, @color, @sz){
     border: @style @color @sz;
 }
@@ -138,3 +184,120 @@
 .b-m(@margin){
     margin-bottom: @margin;
 }
+
+
+//animations
+
+.zoom(@time, @scale){
+    transition: transform @time; /* Animation */
+
+    &:hover{
+        transform: scale(@scale);
+    }
+}
+
+
+.shadow{
+    box-shadow: 8px 8px 20px -6px black;
+
+}
+
+.shadow-bottom{
+    box-shadow: 0 8px 6px -6px black;
+
+}
+
+.fade-in(@s) {
+    animation: fadeIn @s;
+    -webkit-animation: fadeIn @s;
+    -moz-animation: fadeIn @s;
+    -o-animation: fadeIn @s;
+    -ms-animation: fadeIn @s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  .fade-out(@s) {
+    animation: fadeOut @s;
+    -webkit-animation: fadeOut @s;
+    -moz-animation: fadeOut @s;
+    -o-animation: fadeOut @s;
+    -ms-animation: fadeOut @s;
+  }
+  @keyframes fadeOut {
+    100% {opacity:1;}
+    0% {opacity:0;}
+  }
+  
+  @-moz-keyframes fadeOut {
+    100% {opacity:1;}
+    0% {opacity:0;}
+  }
+  
+  @-webkit-keyframes fadeOut {
+    100% {opacity:1;}
+    0% {opacity:0;}
+  }
+  
+  @-o-keyframes fadeOut {
+    100% {opacity:1;}
+    0% {opacity:0;}
+  }
+  
+  @-ms-keyframes fadeOut {
+    100% {opacity:1;}
+    0% {opacity:0;}
+  }
+
+  //effects
+  .fadeout(@c,@h) {
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    height: @h;
+    background: -webkit-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        @c 100%
+
+    ); 
+    background-image: -moz-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        @c 100%
+    );
+    background-image: -o-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        @c 100%
+    );
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        @c 100%
+
+    );
+    background-image: -ms-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        @c 100%
+
+    );
+} 

@@ -1,61 +1,7 @@
 @font-face {
-    font-family: 'Inconsolatazi';
-    src: local('fonts/inconsolataziReg.otf'), local('fonts/inconsolataziReg.otf'),
-        url('fonts/inconsolataziReg.otf') format('opentype');
+    font-family: 'Sheeping Cats';
+    src: local('fonts/SheepingCatsStraight.ttf'), local('fonts/SheepingCatsStraight.ttf'),
+        url('fonts/SheepingCatsStraight.ttf') format('opentype');
 
 }
 
-@font-face {
-    font-family: 'Inconsolatazi';
-    src: local('fonts/inconsolataziBold.otf'), local('fonts/inconsolataziBold.otf'),
-        url('fonts/inconsolataziBold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Mandalore';
-    src: local('fonts/Mandalore.otf'), local('fonts/Mandalore.otf'),
-        url('fonts/Mandalore.otf') format('opentype');
-}
-
-
-@font-face {
-    font-family: 'Mandalore 3D';
-    src: local('fonts/Mandalore3D.otf'), local('fonts/Mandalore3D.otf'),
-        url('fonts/Mandalore3D.otf') format('opentype');
-}
-  
-@font-face {
-    font-family: 'Mandalore 3D';
-    src: local('fonts/Mandalore3DItalic.otf'), local('fonts/Mandalore3DItalic.otf'),
-        url('fonts/Mandalore3DItalic.otf') format('opentype');
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Mandalore Condensed';
-    src: local('fonts/MandaloreCondensed.otf'), local('fonts/MandaloreCondensed.otf'),
-        url('fonts/MandaloreCondensed.otf') format('opentype');
-}
-
-
-@font-face {
-    font-family: 'Mandalore Condensed';
-    src: local('fonts/MandaloreCondensedItalic.otf'), local('fonts/MandaloreCondensedItalic.otf'),
-        url('fonts/MandaloreCondensedItalic.otf') format('opentype');
-    font-style: italic;
-}
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  

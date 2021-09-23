@@ -1,27 +1,42 @@
-import './App.css';
 import { BrowserRouter } from 'react-router-dom';
+import { useEffect } from 'react';
+
+//Redux
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import logger from 'redux-logger'
+import { rootReducer } from './Components/reducers'
 
 //Imported Components 
-import Header from './Components/Header'
 import Render from './Components/Render';
-import UnderMaint from './Components/UnderMaint';
 
 //Imported CSS
 import 'animate.css';
+import { keepTheme } from './Components/utils/Themes';
 
-function App() {
+export const store = createStore( rootReducer, applyMiddleware(logger))
+
+
+function App(props) {
+
+  //monitors current theme
+  useEffect(() => {
+    keepTheme();
+    
+  }, [])
+
   return (
-    <div className="App">
-     {/* 
-      <UnderMaint/>
-      */}
-      <BrowserRouter>
-        <Header/>
-        <Render/>
-      </BrowserRouter>
-      
+    <BrowserRouter>
+      <div className="App">
+        <Provider store = {store}>
+          {/* <UnderMaint/>*/}
+          <Render/>
+        </Provider>
       </div>
+    </BrowserRouter>
+    
   );
 }
 
 export default App;
+ 

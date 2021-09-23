@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from '../img/wcc-bugle-text.svg';
 // import axios from 'axios';
 
 export default function Contact() {
@@ -40,7 +39,6 @@ export default function Contact() {
                         <h6>contact@highgroundrestore.com</h6>
                     </address>
                     <p>Contact us to get your free quote today!</p>
-                    <img src={logo} alt=""/>
                 </div>
                  
                 <form className = 'form' onSubmit={onSubmit}>
