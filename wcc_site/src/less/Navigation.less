@@ -1,7 +1,10 @@
 
 
 #MainNavigator{
-    .gridArea( 1 / 2 / 3 / 3);
+    .gridArea( 1 / 9 / span 20 / span 20);
+    @media @tablet {
+        .gridArea(10/ 1 / span 20/ span 20);
+    }
     #social-media{
         .h(5%);
         .w(100%);
@@ -15,17 +18,19 @@
     #navigation-links-grid{
         .grid(repeat(3, 33.3333%), repeat(2, 50%));
         .p(0);
-        .h(95%);
+        .h(100%);
         .w(100%);
         .b-p(0);
         .m(0);
-        list-style: none;;
+        list-style: none;
+
         li{
             position: relative;
             .w(100%);
             .flex(row);
-            overflow: hidden;
+            align-items: center;
             justify-content: center;
+            overflow: hidden;
             .bg(black);
             .middleWithMarg();
             z-index: 9;
@@ -49,6 +54,9 @@
                 filter: none;
                 .SheepingCats();
                 .h(max-content);
+                line-height: 100%;
+                text-align: center;
+                vertical-align: middle;
                 .c(var(--white-text))!important;
                 &:hover{
                     text-decoration: underline var(--white-text) 1px;
@@ -82,6 +90,11 @@
         &:nth-child(4){
             &:hover{
                 .bg(#003892)!important;
+            }
+            &:nth-child(5){
+                &:hover{
+                    .bg(#92000c)!important;
+                }
             }
         }
         

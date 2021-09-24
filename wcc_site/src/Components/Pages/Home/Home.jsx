@@ -1,30 +1,32 @@
 import React, { useEffect } from 'react'
-import MainNavigator from './Home/MainNavigator'
 
 //imports
-import classic from '../img/logos/PrimeLogo.png'
 import { connect } from 'react-redux'
 import { init } from 'ityped';
-import MainSlider from './Home/MainSlider';
+    //components
+import MainSlider from './MainSlider';
+import MainNavigator from './MainNavigator'
+
 
 function Home(props) {
 
     const { darkMode } = props;
 
+    
     useEffect(() => {
         const iTypedHome = document.querySelector('#ityped-home');
         init(iTypedHome, {
             showCursor: false,
-            strings: ['Programming Services', 'Bring visions to reality.'],
-
-
+            strings: ['Programming Services', 'Bring visions to reality.']
         })
     }, [])
+
+
     return (
         <div id = 'Home'>
             <section className="homeIntro">
                 <div id="IntroLogo">
-                    <img src={classic} alt="" />
+                    <h2 className = 'SheepingCats'>Windy City Code</h2>
                     <p id = 'ityped-home'></p>
                 </div>
                 <MainNavigator/>
@@ -34,6 +36,8 @@ function Home(props) {
     )
 }
 
+
+//Redux state map
 function mapStateToProps(state){
     return{
         darkMode: state.darkModeReducer.darkMode

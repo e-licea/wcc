@@ -5,14 +5,14 @@ import { useEffect } from 'react';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger'
-import { rootReducer } from './Components/reducers'
+import { rootReducer } from './Components/Reducers'
 
 //Imported Components 
-import Render from './Components/Render';
+import Render from './Components/Pages/Render';
 
 //Imported CSS
 import 'animate.css';
-import { keepTheme } from './Components/utils/Themes';
+import { keepTheme } from './Components/Utils/Themes';
 
 export const store = createStore( rootReducer, applyMiddleware(logger))
 

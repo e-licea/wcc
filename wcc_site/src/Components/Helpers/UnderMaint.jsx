@@ -3,7 +3,7 @@
 
 // export default class UnderMaint extends Component {
 
-
+//Run this component when website is under maitenance. 
 
 //     render() {
 //         return (

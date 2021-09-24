@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import { NavItem } from 'reactstrap';
 import { store } from '../../App'
-import { TOGGLE_DARK_MODE } from '../reducers/darkModeReducer'
+import { TOGGLE_DARK_MODE } from '../Reducers/darkModeReducer'
 import { setTheme } from './Themes';
 
 //redux
