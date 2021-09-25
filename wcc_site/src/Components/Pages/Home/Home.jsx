@@ -6,6 +6,7 @@ import { init } from 'ityped';
     //components
 import MainSlider from './MainSlider';
 import MainNavigator from './MainNavigator'
+import WhoIs from './WhoIs';
 
 
 function Home(props) {
@@ -16,7 +17,7 @@ function Home(props) {
     useEffect(() => {
         const iTypedHome = document.querySelector('#ityped-home');
         init(iTypedHome, {
-            showCursor: false,
+            cursorChar: '_',
             strings: ['Programming Services', 'Bring visions to reality.']
         })
     }, [])
@@ -24,13 +25,16 @@ function Home(props) {
 
     return (
         <div id = 'Home'>
-            <section className="homeIntro">
+            <section id="homeIntro">
                 <div id="IntroLogo">
                     <h2 className = 'SheepingCats'>Windy City Code</h2>
                     <p id = 'ityped-home'></p>
                 </div>
                 <MainNavigator/>
                 <MainSlider/>
+            </section>
+            <section id = 'homeContent'>
+                <WhoIs/>
             </section>
         </div>
     )

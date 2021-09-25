@@ -7,7 +7,7 @@ import images from '../../images';
 
 //Hooks 
 import useWindowSize from '../../Hooks/UseWindowSize';
-import WeatherTime from '../../Widgets/WeatherTime';
+import Assistant from '../../Widgets/Assistant';
 
 
 export default function MainNavigator() {
@@ -38,7 +38,7 @@ export default function MainNavigator() {
                         )
                     })
                 }
-                <WeatherTime/>
+                <Assistant/>
             </ul>
         </div>
     )

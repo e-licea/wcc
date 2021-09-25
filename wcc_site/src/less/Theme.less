@@ -2,6 +2,8 @@
     //global
     --white-text: #ffffff;
 
+    --primary-background: #ffffff;
+
     --dark-text: #ffffff;
     --light-text: #81ff87;  
     --secondary-text: @color4;
@@ -14,6 +16,9 @@
 .theme-light{
     //global
     --white-text: #ffffff;
+    //
+    --primary-background: #ffffff;
+
     
     --dark-text: #000000;
     --light-text: #5E4B56;
@@ -28,15 +33,14 @@
     /** sunny side **/
     --blue-background: #c2e9f6;
     --blue-border: #72cce3;
-    --blue-color: #96dcee;
-    --yellow-background: #fffaa8;
-    --yellow-border: #f5eb71;
+    --blue-color: #1a1a1a;
+    --yellow-background: #ffffff;
+    --yellow-border: #ffffff;
     /** dark side **/
     --indigo-background: #808fc7;
     --indigo-border: #5d6baa;
-    --indigo-color: #6b7abb;
+    --indigo-color: #81ff87;
     --gray-border: #e8e8ea;
-    --gray-dots: #e8e8ea;
 }
 
 @keyframes reverse {
@@ -71,7 +75,7 @@
 }
   
 .container--toggle {
-    .max-w(200px);
+    .max-w(195px);
     float: right;
     display: grid;
     place-items: center;
@@ -83,8 +87,8 @@
 
 /* background */
 .toggle--label {
-    .w(70px);
-    .h(34px);
+    .w(65px);
+    .h(30px);
     overflow: hidden;
     background: var(--indigo-color);
     border-radius: 100px;
@@ -162,18 +166,6 @@
     width: 20px;
     height: 5px;
     left: 10px;
-}
-
-/* stars */
-.toggle--label-background {
-    border-radius: 5px;
-    position: relative;
-    background: white;
-    left: 32px;
-    width: 4px;
-    transition: all 150ms ease-in;
-    top: 12px;
-    height: 4px;
 }
 
 .toggle--label-background:before {

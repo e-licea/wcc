@@ -1,7 +1,9 @@
 export const UPDATE_TIME = 'UPDATE_TIME'
 
+const today = new Date();
+
 export const initialState = {
-    date: '00-00-0000',
+    date: `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`,
     weather: '0000',
     time: '00:00:00',
     dayOfWeek: 'Sunday'
@@ -17,3 +19,4 @@ export const appReducer = (state = initialState, action)=>{
             return state
     }
 }
+

@@ -19,9 +19,15 @@
   },
   "homepage": "https://github.com/e-licea/wcc#readme",
   "dependencies": {
+    "axios": "^0.21.4",
+    "cheerio": "^1.0.0-rc.10",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "gitignore": "^0.6.0",
+    "helmet": "^4.6.0",
+    "ityped": "^1.0.3",
     "knex": "^0.21.15",
+    "morgan": "^1.10.0",
     "sqlite3": "^5.0.0"
   },
   "devDependencies": {
