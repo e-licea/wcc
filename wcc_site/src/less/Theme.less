@@ -1,11 +1,35 @@
+//Color Schemes
+
+//light theme
+@sunrise: #ff9667ff;
+@snow: #ffffff;
+@wolf: #686868;
+
+//dark theme
+@charcoal: #191d1f;
+@black: #000000;
+@lime: #81ff87;
+@lavender: #8f51feff;
+
+
 .theme-dark {
     //global
-    --white-text: #ffffff;
+    ---primary-text: @snow;
+    --root-background: @charcoal;
 
+    //Home.jsx
+    --main-nav-links: @lavender;
+
+    //SlimNav.jsx
+    --slim-nav-background: @lavender;
+
+    //Banner.jsx
+    --banner-border: @snow;
+    
     --primary-background: #ffffff;
 
     --dark-text: #ffffff;
-    --light-text: #81ff87;  
+    --light-text: @lavender;  
     --secondary-text: @color4;
     --dark-background: #191d1f;
     --light-background: #586F7C;
@@ -15,13 +39,24 @@
 
 .theme-light{
     //global
-    --white-text: #ffffff;
-    //
+    ---primary-text: @black;
+    --root-background: @snow;
+
+    //Home.jsx
+    --main-nav-links: @sunrise;
+
+    //SlimNav.jsx
+    --slim-nav-background: @sunrise;
+
+    //Banner.jsx
+    --banner-border: @black;
+
+
     --primary-background: #ffffff;
 
     
     --dark-text: #000000;
-    --light-text: #5E4B56;
+    --light-text: #ff9667ff;
     --secondary-text: @color3;
     --dark-background: #ffffff;
     --light-background: #EDDCD2;
@@ -33,13 +68,13 @@
     /** sunny side **/
     --blue-background: #c2e9f6;
     --blue-border: #72cce3;
-    --blue-color: #1a1a1a;
+    --theme-btn-background-light: @sunrise;
     --yellow-background: #ffffff;
     --yellow-border: #ffffff;
     /** dark side **/
     --indigo-background: #808fc7;
     --indigo-border: #5d6baa;
-    --indigo-color: #81ff87;
+    --theme-btn-background-dark: @lavender ;
     --gray-border: #e8e8ea;
 }
 
@@ -90,7 +125,7 @@
     .w(65px);
     .h(30px);
     overflow: hidden;
-    background: var(--indigo-color);
+    background: var(--theme-btn-background-dark);
     border-radius: 100px;
     display: flex;
     position: relative;
@@ -98,7 +133,7 @@
 }
 
 .toggle--checkbox:checked + .toggle--label {
-    background: var(--blue-color);
+    background: var(--theme-btn-background-light);
     border-color: var(--blue-border);
 }
 

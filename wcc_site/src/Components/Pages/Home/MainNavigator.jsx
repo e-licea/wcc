@@ -45,18 +45,18 @@ export default function MainNavigator() {
 }
 
 
-const navigation = [
+export const navigation = [
     {
         id: 1,
         link: 'Web Apps',
         img: images.winterChiHedge,
-        path: '/micro_services'
+        path: '/web_apps'
     },
     {
         id: 2,
         link: 'Micro Services',
         img: images.millChicago,
-        path: '/gallery'
+        path: '/micro_services'
     },
     {
         id: 3,
@@ -68,7 +68,7 @@ const navigation = [
         id: 4,
         link: 'The Lab',
         img: images.chiTrump,
-        path: '/gallery'
+        path: '/the_lab'
     },
     {
         id: 5,

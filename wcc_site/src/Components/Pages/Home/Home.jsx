@@ -3,10 +3,13 @@ import React, { useEffect } from 'react'
 //imports
 import { connect } from 'react-redux'
 import { init } from 'ityped';
+import images from '../../images';
+
     //components
 import MainSlider from './MainSlider';
 import MainNavigator from './MainNavigator'
 import WhoIs from './WhoIs';
+import Overview from './Overview';
 
 
 function Home(props) {
@@ -17,7 +20,7 @@ function Home(props) {
     useEffect(() => {
         const iTypedHome = document.querySelector('#ityped-home');
         init(iTypedHome, {
-            cursorChar: '_',
+            showCursor: false,
             strings: ['Programming Services', 'Bring visions to reality.']
         })
     }, [])
@@ -27,13 +30,14 @@ function Home(props) {
         <div id = 'Home'>
             <section id="homeIntro">
                 <div id="IntroLogo">
-                    <h2 className = 'SheepingCats'>Windy City Code</h2>
+                    <img src = {darkMode?images.wccDark:images.wccLight} alt="" />
                     <p id = 'ityped-home'></p>
                 </div>
                 <MainNavigator/>
                 <MainSlider/>
             </section>
             <section id = 'homeContent'>
+                <Overview/>
                 <WhoIs/>
             </section>
         </div>

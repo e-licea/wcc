@@ -34,6 +34,7 @@
             .bg(black);
             .middleWithMarg();
             z-index: 9;
+            &:hover{.bg(var(--main-nav-links))};
             img{
                 position: absolute;
                 z-index: 0;
@@ -57,7 +58,7 @@
                 line-height: 100%;
                 text-align: center;
                 vertical-align: middle;
-                .c(var(--white-text))!important;
+                .c(@snow);
                 &:hover{
                     text-decoration: underline var(--white-text) 1px;
                 }
@@ -66,41 +67,24 @@
     }
 }
 
-
-//colors for li inside main navigator grid
-
-#navigation-links-grid{
-
-    li{
-        &:nth-child(1){
-            &:hover{
-                .bg(#92000c)!important;
+//SlimNav.jsx styles
+#SlimNav{
+    .w(100%);
+    .max-h(250px);
+    .bg(var(--slim-nav-background));
+    ul{
+        list-style: none;
+        .flex(row);
+        justify-content: space-evenly;
+        li{
+            a{
+                .SheepingCats();
+                .c(var(---primary-text));
+                text-decoration: none;
             }
         }
-        &:nth-child(2):hover{
-            &:hover{
-                .bg(#003892)!important;
-            }
-        }
-        &:nth-child(3){
-            &:hover{
-                .bg(#92000c)!important;
-            }
-        }
-        &:nth-child(4){
-            &:hover{
-                .bg(#003892)!important;
-            }
-            &:nth-child(5){
-                &:hover{
-                    .bg(#92000c)!important;
-                }
-            }
-        }
-        
     }
 }
-
 
 
 

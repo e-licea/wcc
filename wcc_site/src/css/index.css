@@ -80,6 +80,9 @@
   margin: 0 auto;
   z-index: 9;
 }
+#MainNavigator #navigation-links-grid li:hover {
+  background-color: var(--main-nav-links);
+}
 #MainNavigator #navigation-links-grid li img {
   position: absolute;
   z-index: 0;
@@ -107,25 +110,26 @@
   line-height: 100%;
   text-align: center;
   vertical-align: middle;
-  color: var(--white-text) !important;
+  color: #ffffff;
 }
 #MainNavigator #navigation-links-grid li a:hover {
   text-decoration: underline var(--white-text) 1px;
 }
-#navigation-links-grid li:nth-child(1):hover {
-  background-color: #92000c !important;
+#SlimNav {
+  width: 100%;
+  max-height: 250px;
+  background-color: var(--slim-nav-background);
 }
-#navigation-links-grid li:nth-child(2):hover:hover {
-  background-color: #003892 !important;
+#SlimNav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-#navigation-links-grid li:nth-child(3):hover {
-  background-color: #92000c !important;
-}
-#navigation-links-grid li:nth-child(4):hover {
-  background-color: #003892 !important;
-}
-#navigation-links-grid li:nth-child(4):nth-child(5):hover {
-  background-color: #92000c !important;
+#SlimNav ul li a {
+  font-family: 'Sheeping Cats';
+  color: var(---primary-text);
+  text-decoration: none;
 }
 #Contact .contact-card {
   display: flex;
@@ -305,7 +309,7 @@
   grid-template-rows: repeat(20, 5%);
 }
 #Home #homeIntro #IntroLogo {
-  background-color: #000000;
+  background-color: var(--dark-background);
   display: flex;
   flex-direction: column;
   height: 400px;
@@ -321,15 +325,13 @@
     grid-area: 1 / 1 / span 9 / span 10;
   }
 }
-#Home #homeIntro #IntroLogo:hover {
-  background-color: #070606;
-}
 #Home #homeIntro #IntroLogo img {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
 #Home #homeIntro #IntroLogo p {
-  color: #ffffff;
+  margin: 4%;
+  color: var(---primary-text);
   height: 20px;
   font-size: 1.2rem;
 }
@@ -346,6 +348,13 @@
     width: 100%;
     grid-area: 1 / 11 / span 9 / span 20;
   }
+}
+#Home #homeContent #Overview {
+  color: var(---primary-text);
+}
+#Home #homeContent #WhoIs #WhoIsTool {
+  background-color: black;
+  padding: 1%;
 }
 .slide {
   width: 100%;
@@ -438,10 +447,14 @@
   width: 100%;
 }
 .theme-dark {
-  --white-text: #ffffff;
+  ---primary-text: #ffffff;
+  --root-background: #191d1f;
+  --main-nav-links: #8f51feff;
+  --slim-nav-background: #8f51feff;
+  --banner-border: #ffffff;
   --primary-background: #ffffff;
   --dark-text: #ffffff;
-  --light-text: #81ff87;
+  --light-text: #8f51feff;
   --secondary-text: #ffffff;
   --dark-background: #191d1f;
   --light-background: #586F7C;
@@ -449,10 +462,14 @@
   --button-border: #B8DBD9;
 }
 .theme-light {
-  --white-text: #ffffff;
+  ---primary-text: #000000;
+  --root-background: #ffffff;
+  --main-nav-links: #ff9667ff;
+  --slim-nav-background: #ff9667ff;
+  --banner-border: #000000;
   --primary-background: #ffffff;
   --dark-text: #000000;
-  --light-text: #5E4B56;
+  --light-text: #ff9667ff;
   --secondary-text: #000000;
   --dark-background: #ffffff;
   --light-background: #EDDCD2;
@@ -463,13 +480,13 @@
   /** sunny side **/
   --blue-background: #c2e9f6;
   --blue-border: #72cce3;
-  --blue-color: #1a1a1a;
+  --theme-btn-background-light: #ff9667ff;
   --yellow-background: #ffffff;
   --yellow-border: #ffffff;
   /** dark side **/
   --indigo-background: #808fc7;
   --indigo-border: #5d6baa;
-  --indigo-color: #81ff87;
+  --theme-btn-background-dark: #8f51feff;
   --gray-border: #e8e8ea;
 }
 @keyframes reverse {
@@ -515,14 +532,14 @@
   width: 65px;
   height: 30px;
   overflow: hidden;
-  background: var(--indigo-color);
+  background: var(--theme-btn-background-dark);
   border-radius: 100px;
   display: flex;
   position: relative;
   transition: all 350ms ease-in;
 }
 .toggle--checkbox:checked + .toggle--label {
-  background: var(--blue-color);
+  background: var(--theme-btn-background-light);
   border-color: var(--blue-border);
 }
 /* sun and moon */
@@ -605,6 +622,17 @@
   border-radius: 5px;
   background: white;
   transition: all 150ms ease-in;
+}
+#Banner {
+  margin: 3% 0;
+  width: 100%;
+  border: var(--banner-border) 1px solid;
+  text-align: center;
+  vertical-align: middle;
+  height: 200px;
+  line-height: 200px;
+  font-family: 'Sheeping Cats';
+  font-size: 2rem;
 }
 @font-face {
   font-family: 'IBM Plex Sans Arabic';
@@ -690,7 +718,7 @@
 html,
 #root,
 .App {
-  background-color: var(--dark-background);
+  background-color: var(--root-background);
 }
 .App {
   max-width: 1600px;

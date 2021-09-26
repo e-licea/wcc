@@ -11,7 +11,7 @@
             repeat(20, 5%) 
         );
         #IntroLogo{
-            .bg(@color3);
+            .bg(var(--dark-background));
             .flex(column);
             .h(400px);
             align-items: center;
@@ -23,15 +23,13 @@
                 .h(100%);
                 .gridArea( 1 / 1 / span 9 / span 10);
             }
-            &:hover{
-                .bg(#070606);
-            }
             img{
-                .w(60%);
+                .w(70%);
                 .middleWithMarg();
             }
             p{
-                .c(@color4);
+                .m(4%);
+                .c(var(---primary-text));
                 .h(20px);
                 .f-size(1.2rem);
             }
@@ -46,6 +44,19 @@
                 .h(100%);
                 .w(100%);
                 .gridArea( 1 / 11 / span 9 / span 20);
+            }
+        }
+    }
+
+    #homeContent{
+        #Overview{
+            .c(var(---primary-text));
+        }
+        #WhoIs{
+
+            #WhoIsTool{
+                .bg(black);
+                .p(1%);
             }
         }
     }
