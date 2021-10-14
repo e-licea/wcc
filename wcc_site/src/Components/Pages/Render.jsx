@@ -24,8 +24,6 @@ export default function Render() {
             <Route path = '/project_gallery' component = {ProjectGallery}/>
             <Route path = '/micro_services' component = {MicroServices}/>
             <Route path = '/seo' component = {SEO}/>
-
-
             <Contact/>
         </div>
     )

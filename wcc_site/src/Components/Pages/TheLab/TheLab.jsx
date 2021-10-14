@@ -1,7 +1,7 @@
 import React from 'react'
 import SlimNav from '../../Helpers/SlimNav'
 import Banner from '../../Helpers/Banner'
-import images from '../../images'
+import images from '../../Helpers/images'
 
 export default function TheLab() {
     return (

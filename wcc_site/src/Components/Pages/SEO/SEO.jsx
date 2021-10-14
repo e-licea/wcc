@@ -1,7 +1,7 @@
 import React from 'react'
 import Banner from '../../Helpers/Banner'
 import SlimNav from '../../Helpers/SlimNav'
-import images from '../../images'
+import images from '../../Helpers/images'
 
 export default function SEO() {
     return (

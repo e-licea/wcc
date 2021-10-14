@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 //imports
 import { connect } from 'react-redux'
 import { init } from 'ityped';
-import images from '../../images';
+import images from '../../Helpers/images';
 
     //components
 import MainSlider from './MainSlider';

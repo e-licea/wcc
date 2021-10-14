@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import instagram from '../../../img/icons/instagram.png'
 import facebook from '../../../img/icons/facebook.png'
 
-import images from '../../images';
+import images from '../../Helpers/images';
 
 //Hooks 
 import useWindowSize from '../../Hooks/UseWindowSize';
